@@ -18,9 +18,18 @@ const signInFailure = (error) => {
   console.error('sign in success failed . error is :', error)
 }
 
+const signOutSucess = (data) => {
+  console.log('sign out ran . data is :', data)
+}
+
+const signOutFailure = (error) => {
+  console.error('sign out failed . error is :', error)
+}
 module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSucess,
-  signInFailure
+  signInFailure,
+  signOutSucess,
+  signOutFailure
 }
