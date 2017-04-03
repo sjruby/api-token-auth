@@ -1,11 +1,13 @@
 #!/bin/bash
 
-#curl "http://localhost:3000/sign-in" \
-curl "http://httpbin.org/post" \
-  --include \
-  --request POST \
+curl --include --request POST http://localhost:4741/sign-in \
   --header "Content-Type: application/json" \
-  --data ""
+  --data '{
+    "credentials": {
+      "email": "sam@gmail.com",
+      "password": "sam"
+    }
+  }'
 
 # data output from curl doesn't have a trailing newline
 echo
